@@ -9,6 +9,10 @@ class Person
 #attr_write setter onliy
   attr_accessor:age
 end
+class Shopkeeper < Person
+
+end
+
 
 module SpecialAility
   attr_reader :special_aility 
