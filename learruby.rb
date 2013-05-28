@@ -46,3 +46,4 @@ end
 
 engineer = Engineer.new('Tai',31,'live','Can build Bridges')
 puts engineer.special_aility
+puts engineer.name
