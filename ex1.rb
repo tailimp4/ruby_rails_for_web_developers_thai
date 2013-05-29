@@ -1,3 +1,3 @@
-#1
+# Ex.1 
 animals = ['Cat','Dog','Iguana',nil]
 print animals
