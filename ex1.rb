@@ -81,6 +81,10 @@ class Cat < Animals
 
 end 
 
-  test = Cat.new("ss","2","m")
-  	 puts test.sharp_claws
- 	 puts test.special_aility
+   
+#Ex 9
+
+ golden_retriever = Dog.new("NameDogs","2","m")
+  # puts  golden_retriever.legs   ไม่สามารถสืบทอดจากคลาสแม่ได้เพราะไม่ได้ประกาศไว้คุณสมบัติไว้
+   puts   golden_retriever.best_friend # แสดงผลลัพทืออกมาเป็น true เพราะหลังจากสืบทอดมาจากคลาสแม่แล้ว มาเพิ่มคุณสมบัติเข้าไป
+   puts   golden_retriever.special_aility # แสดงผลลัพทืออกมาเป็น special_aility เพราะหลังจากสืบทอดมาจากคลาสแม่แล้ว มาเพิ่มคุณสมบัติเข้าไป
