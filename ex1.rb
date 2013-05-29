@@ -24,5 +24,24 @@ class Animals
   attr_accessor:age
   attr_accessor:sex
 end
-	 test = Animals.new("tai","31","m")
- 	 print test.name + " age: " + test.age + " sex: " + test.sex
+module SpecialAility
+  attr_reader :special_aility 
+end
+	 
+#Ex 5
+class Mammal < Animals
+  include SpecialAility
+  def initialize(name,age,sex,total_leg,baby_food= 'Milk',special_aility= 'no-special_aility')
+    super(name,age,sex)
+    @total_leg = total_leg
+    @baby_food = baby_food
+    @special_aility =special_aility
+  end
+  attr_accessor :total_leg
+  attr_reader :baby_food
+  attr_reader :special_aility
+end	 
+
+  test = Mammal.new("tai","31","m","4")
+  	 puts Mammal
+ 	 print test.name + " age: " + test.age + " sex: " + test.sex  + " total_leg: " + test.total_leg + " baby_food: " + test.baby_food  + " special_aility :" + test.special_aility
