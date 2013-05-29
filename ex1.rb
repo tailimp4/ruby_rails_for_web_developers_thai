@@ -67,6 +67,20 @@ class Dog < Animals
   attr_accessor :special_aility
 
 end	
-  test = Dog.new("ss","2","m")
-  	 puts test.best_friend
+#Ex 8
+class Cat < Animals
+  include SpecialAility
+  def initialize(name,age,sex,sharp_claws=true,special_aility= 'climbing the tree')
+    super(name,age,sex)
+    @sharp_claws = sharp_claws
+    @special_aility = special_aility
+  
+  end
+  attr_accessor :sharp_claws
+  attr_accessor :special_aility
+
+end 
+
+  test = Cat.new("ss","2","m")
+  	 puts test.sharp_claws
  	 puts test.special_aility
