@@ -31,7 +31,7 @@ end
 #Ex 5
 class Mammal < Animals
   include SpecialAility
-  def initialize(name,age,sex,total_leg,total_wing= 'Milk',special_aility= 'no-special_aility')
+  def initialize(name,age,sex,total_leg,baby_food= 'Milk',special_aility= 'no-special_aility')
     super(name,age,sex)
     @total_leg = total_leg
     @baby_food = baby_food
@@ -54,6 +54,19 @@ class Bird < Animals
   attr_accessor :total_wing
 
 end	 
-  test = Bird.new("B","2","m","4")
-  	 puts test.total_leg
- 	 puts test.total_wing
+#Ex 6
+class Dog < Animals
+	include SpecialAility
+  def initialize(name,age,sex,best_friend=true,special_aility= 'special_aility')
+    super(name,age,sex)
+    @best_friend = best_friend
+    @special_aility = special_aility
+  
+  end
+  attr_accessor :best_friend
+  attr_accessor :special_aility
+
+end	
+  test = Dog.new("ss","2","m")
+  	 puts test.best_friend
+ 	 puts test.special_aility
