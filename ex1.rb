@@ -54,7 +54,7 @@ class Bird < Animals
   attr_accessor :total_wing
 
 end	 
-#Ex 6
+#Ex 7
 class Dog < Animals
 	include SpecialAility
   def initialize(name,age,sex,best_friend=true,special_aility= 'special_aility')
