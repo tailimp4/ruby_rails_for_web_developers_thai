@@ -88,3 +88,53 @@ end
   # puts  golden_retriever.legs   ไม่สามารถสืบทอดจากคลาสแม่ได้เพราะไม่ได้ประกาศไว้คุณสมบัติไว้
    puts   golden_retriever.best_friend # แสดงผลลัพทืออกมาเป็น true เพราะหลังจากสืบทอดมาจากคลาสแม่แล้ว มาเพิ่มคุณสมบัติเข้าไป
    puts   golden_retriever.special_aility # แสดงผลลัพทืออกมาเป็น special_aility เพราะหลังจากสืบทอดมาจากคลาสแม่แล้ว มาเพิ่มคุณสมบัติเข้าไป
+
+#Ex 10
+class Zoo 
+  def Zoo.animals
+    animals = Animals.new("Dog","2","m")
+    puts animals.instance_variables
+  end
+  def Zoo.cats
+    cat = Cat.new("cat","2","m")
+    puts cat.inspect
+  end
+  def Zoo.search(type="leg",total)
+      @type = type
+      @total = total
+    if @type == "leg"
+      if @total == 4
+         puts  Dog.new("Dogs","2","m").inspect
+         puts  Cat.new("Cat","2","m").inspect
+      elsif @total == 2
+         puts  Bird.new("Bird","2","m").inspect
+      else
+        "out of Animals"
+      end
+    elsif @type == 'food'
+      mammal = Mammal.new("Ani_Mammal","2","m",total)
+      puts mammal.inspect
+    else
+      "out of type"
+  end 
+end
+ attr_accessor :type
+ attr_accessor :total
+
+end
+#------Test
+  puts "----------------- start Zoo.animals --------------"
+    puts   Zoo.animals
+  puts "------------------ End ---------------"
+  puts "----------------- start Zoo.cats --------------"
+    puts   Zoo.cats
+  puts "------------------ End ---------------"
+  puts "----------------- start zoo.search('leg',4) --------------"
+    puts   Zoo.search("leg",4)
+  puts "------------------ End ---------------"
+  puts "----------------- start zoo.search('leg',2) --------------"
+    puts   Zoo.search("leg",2)
+  puts "------------------ End ---------------"
+  puts "----------------- start zoo.search('leg',0) --------------"
+    puts   Zoo.search("leg",0)
+  puts "------------------ End ---------------"
