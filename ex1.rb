@@ -13,28 +13,26 @@ personal = {
   colors: ["blue", "red", "black"]
 }
 #Ex 4
-class Animals
+class Animal
   def initialize(name,age,sex)
     @name = name 
     @age = age
     @sex = sex
   end
 
-  attr_accessor:name
-  attr_accessor:age
-  attr_accessor:sex
+  attr_accessor:name,:age ,:sex
 end
 module SpecialAility
   attr_reader :special_aility 
 end
 	 
 #Ex 5
-class Mammal < Animals
+class Mammal < Animal
   include SpecialAility
-  def initialize(name,age,sex,total_leg,baby_food= 'Milk',special_aility= 'no-special_aility')
+  def initialize(name,age,sex,total_leg,special_aility= 'no-special_aility')
     super(name,age,sex)
     @total_leg = total_leg
-    @baby_food = baby_food
+    @baby_food = 'Milk'
     @special_aility =special_aility
   end
   attr_accessor :total_leg
@@ -43,11 +41,11 @@ class Mammal < Animals
 end	 
 
 #Ex 6
-class Bird < Animals
-  def initialize(name,age,sex,total_leg=2,total_wing=2)
+class Bird < Animal
+  def initialize(name,age,sex)
     super(name,age,sex)
-    @total_leg = total_leg
-    @total_wing = total_wing
+    @total_leg = 2
+    @total_wing = 2
   
   end
   attr_accessor :total_leg
@@ -55,10 +53,11 @@ class Bird < Animals
 
 end	 
 #Ex 7
-class Dog < Animals
+#class Dog < Animal
+class Dog < Mammal
 	include SpecialAility
   def initialize(name,age,sex,best_friend=true,special_aility= 'special_aility')
-    super(name,age,sex)
+   # super(name,age,sex)
     @best_friend = best_friend
     @special_aility = special_aility
   
@@ -67,8 +66,13 @@ class Dog < Animals
   attr_accessor :special_aility
 
 end	
+
+  test = Dog.new("ss","2","m")
+  puts "----------------- Dog --------------"
+   puts  test.best_friend
+   puts test.special_aility
 #Ex 8
-class Cat < Animals
+class Cat < Animal
   include SpecialAility
   def initialize(name,age,sex,sharp_claws=true,special_aility= 'climbing the tree')
     super(name,age,sex)
@@ -92,7 +96,7 @@ end
 #Ex 10
 class Zoo 
   def Zoo.animals
-    animals = Animals.new("Dog","2","m")
+    animals = Animal.new("Dog","2","m")
     puts animals.instance_variables
   end
   def Zoo.cats
