@@ -29,13 +29,13 @@ end
 #Ex 5
 class Mammal < Animal
   include SpecialAility
-  def initialize(name,age,sex,total_leg,special_aility= 'no-special_aility')
+  def initialize(name,age,sex,leg,special_aility= 'no-special_aility')
     super(name,age,sex)
-    @total_leg = total_leg
+    @leg = leg
     @baby_food = 'Milk'
     @special_aility =special_aility
   end
-  attr_accessor :total_leg
+  attr_accessor :leg
   attr_reader :baby_food
   attr_reader :special_aility
 end	 
@@ -44,38 +44,38 @@ end
 class Bird < Animal
   def initialize(name,age,sex)
     super(name,age,sex)
-    @total_leg = 2
+    @leg = 2
     @total_wing = 2
   
   end
-  attr_accessor :total_leg
-  attr_accessor :total_wing
+  attr_accessor :leg ,:total_wing
+  
 
 end	 
 #Ex 7
 #class Dog < Animal
 class Dog < Mammal
 	include SpecialAility
-  def initialize(name,age,sex,best_friend=true,special_aility= 'special_aility')
-   # super(name,age,sex)
+  def initialize(name,age,sex,leg,special_aility= 'special_aility',best_friend=true)
+    super(name,age,sex,leg)
     @best_friend = best_friend
     @special_aility = special_aility
-  
+    
   end
   attr_accessor :best_friend
   attr_accessor :special_aility
 
 end	
 
-  test = Dog.new("ss","2","m")
+  test = Dog.new("ss","2","m",4)
   puts "----------------- Dog --------------"
    puts  test.best_friend
    puts test.special_aility
 #Ex 8
-class Cat < Animal
+class Cat < Mammal
   include SpecialAility
-  def initialize(name,age,sex,sharp_claws=true,special_aility= 'climbing the tree')
-    super(name,age,sex)
+  def initialize(name,age,sex,leg,special_aility= 'climbing the tree',sharp_claws=true)
+    super(name,age,sex,leg)
     @sharp_claws = sharp_claws
     @special_aility = special_aility
   
@@ -88,57 +88,36 @@ end
    
 #Ex 9
 
- golden_retriever = Dog.new("NameDogs","2","m")
+   golden_retriever = Dog.new("NameDogs","2","m",4)
   # puts  golden_retriever.legs   ไม่สามารถสืบทอดจากคลาสแม่ได้เพราะไม่ได้ประกาศไว้คุณสมบัติไว้
    puts   golden_retriever.best_friend # แสดงผลลัพทืออกมาเป็น true เพราะหลังจากสืบทอดมาจากคลาสแม่แล้ว มาเพิ่มคุณสมบัติเข้าไป
    puts   golden_retriever.special_aility # แสดงผลลัพทืออกมาเป็น special_aility เพราะหลังจากสืบทอดมาจากคลาสแม่แล้ว มาเพิ่มคุณสมบัติเข้าไป
 
 #Ex 10
 class Zoo 
-  def Zoo.animals
-    animals = Animal.new("Dog","2","m")
-    puts animals.instance_variables
-  end
-  def Zoo.cats
-    cat = Cat.new("cat","2","m")
-    puts cat.inspect
-  end
-  def Zoo.search(type="leg",total)
-      @type = type
-      @total = total
-    if @type == "leg"
-      if @total == 4
-         puts  Dog.new("Dogs","2","m").inspect
-         puts  Cat.new("Cat","2","m").inspect
-      elsif @total == 2
-         puts  Bird.new("Bird","2","m").inspect
-      else
-        "out of Animals"
-      end
-    elsif @type == 'food'
-      mammal = Mammal.new("Ani_Mammal","2","m",total)
-      puts mammal.inspect
-    else
-      "out of type"
-  end 
-end
- attr_accessor :type
- attr_accessor :total
+    def initialize(a = [])
+      @animals = a
+    end
+    def search(attribute, value)
+      @animals.select{|a| a.send(attribute) == value} 
+    end 
+    attr_accessor :animals,:name_animal
 
 end
+
+  golden  = Dog.new("nameDog",2,"m",4)
+  cat_thai = Cat.new("namecat",1,"m",4)
+  bird_thai = Bird.new("namebird",1,"m")
+
+  zoo_dusit = Zoo.new([golden,cat_thai,bird_thai])
+
+ 
+  puts "------- Zoo.search"
+  puts zoo_dusit.search('leg',2).inspect
+   puts "-------End Zoo.search"
+
 #------Test
   puts "----------------- start Zoo.animals --------------"
-    puts   Zoo.animals
-  puts "------------------ End ---------------"
-  puts "----------------- start Zoo.cats --------------"
-    puts   Zoo.cats
-  puts "------------------ End ---------------"
-  puts "----------------- start zoo.search('leg',4) --------------"
-    puts   Zoo.search("leg",4)
-  puts "------------------ End ---------------"
-  puts "----------------- start zoo.search('leg',2) --------------"
-    puts   Zoo.search("leg",2)
-  puts "------------------ End ---------------"
-  puts "----------------- start zoo.search('leg',0) --------------"
-    puts   Zoo.search("leg",0)
+     dusit = Zoo.new(["dog","cat"])
+     puts   dusit.animals
   puts "------------------ End ---------------"
