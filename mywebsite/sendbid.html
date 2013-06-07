@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Road Bid Action</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+    <script type="text/JavaScript" src="js/jquery-2.0.0.js"></script> 
+    <script type="text/JavaScript" src="js/bootstrap.js"></script> 
+    <LINK href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+    <LINK href="css/bootstrap.css" rel="stylesheet" type="text/css">
+   <link type="text/css" rel="stylesheet" href="css/pure_style.css"></link>
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">WinBid</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="index.html">Home</a></li>
+              <li><a href="mybid.html">Bid Action</a></li>
+              <li><a href="makebid.html">Setup Bid</a></li>
+              <li><a href="register.html">Register</a></li>
+            </ul>
+            <form class="navbar-form pull-right">
+              <input class="span2" type="text" placeholder="Email">
+              <input class="span2" type="password" placeholder="Password">
+              <button type="submit" class="btn">Sign in</button>
+            </form>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+            <br><br>
+    <div class="container">
+      <!-- Main hero unit for a primary marketing message or call to action -->
+             <div class="form-actionsss">
+           <form>
+              <fieldset>
+     
+            <div class="clear"></div>
+    <div class="openAuction_bar_mainDIV">
+      <div class="openAction_bar-left"></div>
+      <div class="openAction_bar-middle">
+          <div class="page_title_font" style="float: left;">Bid ID: <span class="history_auctionid" id="history_auctionid">XXXX</span></div>
+          <div style="float: right;" class="rightsidefont">
+                                
+                        <span id="added_watchlist" style="display: none;cursor: pointer"></span>
+                      </div>
+      </div>
+      <div class="openAction_bar-right"></div>
+     </div>
+
+         <div class="openAuction_bar_mainDIV2" style="height: 580px;"> 
+        <div class="auctypedetail">
+          <div class="product-name-bar">
+            <div class="product-name-bar-left">
+              <div class="title" >เงื่อนไขการประมูล</div>
+              <div ><a href="/notice.html" target="_blank" style="color:#90521f;">ข้อควรทราบก่อนการประมูล</a></div>
+               <div class="darkblue-text-17-b" style="height: 30px;">
+                <strong>
+                Product name XXXXXX
+                </strong>
+             </div>
+            </div>
+            <div class="product-name-bar-right">
+              <div style="float: left;">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="height: 20px;"></div>
+        <div class="leftcleaner"></div>
+
+        <div class="productdetail_box_container" style="width: 356px; padding-left: 2px;">
+          <div class="productdetail_box" style="width: 355px;">
+            <div class="smallcornerleft"></div>
+            <div class="smallcornermiddle" style="width: 341px;"></div>
+            <div class="smallcornerright"></div>
+              <div class="middlepart" style="width: 353px;" id="productdetailtopmargin">
+                <div class="bigimage" align="center">
+                  <span id="mainimage1" >
+                  <img src="img/cricel.png" height="260" width="279">
+                                    </span>
+                  <span id="mainimage2" <img src="img/cricel.png">                </span>
+                  <span id="mainimage3" style="display: none"></span>               
+                  <span id="mainimage4" style="display: none"></span>             
+                            <br>
+                                    <!-- Start show pramool -->
+                         <br><font size="2"><center><b>สินค้านี้เริ่มประมูลราคา : 1400.00 บาท</b></center></font>
+                                                                                        
+                                   <!-- End show pramool-->
+                </div>
+                                
+                <div class="thumb">
+                  <div style="padding-top: 15px; text-align: left; padding-left: 10px;">
+                                    <img src="img/cricel.png" style="cursor: pointer" height="60" width="79">
+                    
+                                    <img id="otherimageprd_2" src="img/cricel.png" onclick="changeimage(2);" style="cursor: pointer" height="60" width="79">                 <img src="img/cricel.png" style="cursor: pointer" height="60" width="79">                  <img src="img/cricel.png" style="cursor: pointer" height="60" width="79">                  </div>
+                </div>
+              </div>
+            <div class="smallcornerleftbot"></div>
+            <div class="smallcornermiddlebot" style="width: 341px;"></div>
+            <div class="smallcornerrightbot"></div>
+          </div>
+        </div>
+              
+        <div class="productdetail_box_container" style="padding-left: 9px;" >
+          <div class="auction-item" style="display: none" title="11301" id="auction_11301"></div>
+          <div class="productdetail_box" >
+            <div class="smallcornerleft"></div>
+            <div class="smallcornermiddle"></div>
+            <div class="smallcornerright"></div>
+              <div class="middlepart" id="productdetailtopmargin" style="height: 250px;">
+             <iframe width="280" height="245"
+              src="http://www.youtube.com/embed/XGSy3_Czz8k">
+              </iframe>             
+              
+              </div>
+            <div class="smallcornerleftbot"></div>
+            <div class="smallcornermiddlebot"></div>
+            <div class="smallcornerrightbot"></div>
+          </div>
+          <div class="clear"></div>
+          <div class="productdetail_box">
+            <div class="smallcornerleft"></div>
+            <div class="smallcornermiddle"></div>
+            <div class="smallcornerright"></div>
+              <div class="middlepart" id="productdetailtopmargin" style="height: 177px;padding-left: 12px;">
+                <div class="row" style="padding-top: 10px;">
+                  <div class="left1"><strong>Deatail:</strong></div>
+                </div>
+                <div class="row">
+                  <div class="left1">Category:</div>
+                  <div class="right1">XXXXXX</div>
+                </div>
+                  <div class="row">
+                  <div class="left1">Product name:</div>
+                  <div class="right1">XXXXXX</div>
+                </div>
+                              <div class="row">
+                  <div class="left1">Sart:</div>
+                  <div class="right1">MMDDYYYY</div>
+                </div>
+                 <div class="row">
+                  <div class="left1">End:</div>
+                 <div class="right1">MMDDYYYY</div>
+                 
+                </div>   
+                <div class="row">
+                  <div class="left1">Msg:</div>
+                          
+                </div>
+                <div class="row" style="padding-top: 5px;padding-left: 12px;">
+                  <div style="width: 260px;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
+                </div>
+              </div>
+          
+            <div class="smallcornerleftbot"></div>
+            <div class="smallcornermiddlebot"></div>
+            <div class="smallcornerrightbot"></div>
+          </div>
+        </div>
+              
+        <div class="productdetail_box_container" style=" padding-left: 9px;">
+                    <div class="productdetail_box">
+              <div class="product-history-full"><div class="autobidder_title">ราคาที่เสนอการประมูล</div></div>
+              <div class="middlepart" style="height: 120px;">
+                <div style="padding-top: 15px;" align="center"><span class="darkblue-text-17-b">ราคาที่นำเสนอ</span></div>
+                <div  style="padding-top: 8px; clear:both;" align="center"><input type="text" id="txtPrice" placeholder="Type something…"></div>
+                <div style="padding-top: 10px; clear:both;" align="center"><button type="Add" class="btn btn-success">Add</button></div>
+                <div style="display: none;"><img src="images/Book_btn.png" id="bookbidbutlerbutton" style="cursor: pointer" class="bookbidbutlerbutton" border="0"></div>
+              </div>
+            <div class="smallcornerleftbot"></div>
+            <div class="smallcornermiddlebot"></div>
+            <div class="smallcornerrightbot"></div>
+          </div>
+                    <div class="clear"></div>
+        <div id="producthistory1">    
+          <div class="productdetail_box">
+                    <div class="product-history-full"><div class="autobidder_title">ข้อมูลผู้ตั้งประมูล</div></div>
+                        <div class="middlepart" style="height: 275px;">
+                <div class="producthistitlerow" style="padding-top: 25px;">
+                  <div class="cell">ราคา</div>
+                  <div class="cell">สินค้า</div>
+                  <div class="cell">ประเภท</div>
+                </div>
+                                  <div class="producthisrow" style="height: 22px;">
+                    <div class="cell" id="bid_price_0">1.00</div>
+                    <div class="cell" id="bid_user_name_0">phakamas</div>
+                    <div class="cell" id="bid_type_0">Single Bid</div>
+                  </div>    
+                                    <div class="producthisrow" style="height: 22px;">
+                    <div class="cell" id="bid_price_1">0.75</div>
+                    <div class="cell" id="bid_user_name_1">nunumwarn</div>
+                    <div class="cell" id="bid_type_1">Single Bid</div>
+                  </div>    
+                                    <div class="producthisrow" style="height: 22px;">
+                    <div class="cell" id="bid_price_2">0.50</div>
+                    <div class="cell" id="bid_user_name_2">zeeza</div>
+                    <div class="cell" id="bid_type_2">Single Bid</div>
+                  </div>    
+                                    <div class="producthisrow" style="height: 22px;">
+                    <div class="cell" id="bid_price_3">0.25</div>
+                    <div class="cell" id="bid_user_name_3">plexmas</div>
+                    <div class="cell" id="bid_type_3">Single Bid</div>
+                  </div>    
+                                    <div class="producthisrow" style="height: 22px;">
+                    <div class="cell" id="bid_price_4">&nbsp;</div>
+                    <div class="cell" id="bid_user_name_4">
+                                        </div>
+                    <div class="cell" id="bid_type_4"></div>
+                  </div>    
+                                    <div class="producthisrow" style="height: 22px;">
+                    <div class="cell" id="bid_price_5">&nbsp;</div>
+                    <div class="cell" id="bid_user_name_5">
+                                        </div>
+                    <div class="cell" id="bid_type_5"></div>
+                  </div>    
+                                    <div class="producthisrow" style="height: 22px;">
+                    <div class="cell" id="bid_price_6">&nbsp;</div>
+                    <div class="cell" id="bid_user_name_6">
+                                        </div>
+                    <div class="cell" id="bid_type_6"></div>
+                  </div>    
+                                    <div class="producthisrow" style="height: 22px;">
+                    <div class="cell" id="bid_price_7">&nbsp;</div>
+                    <div class="cell" id="bid_user_name_7">
+                                        </div>
+                    <div class="cell" id="bid_type_7"></div>
+                  </div>    
+                                    <div class="producthisrow" style="height: 22px;">
+                    <div class="cell" id="bid_price_8">&nbsp;</div>
+                    <div class="cell" id="bid_user_name_8">
+                                        </div>
+                    <div class="cell" id="bid_type_8"></div>
+                  </div>    
+                                    <div class="producthisrow" style="height: 22px;">
+                    <div class="cell" id="bid_price_9">&nbsp;</div>
+                    <div class="cell" id="bid_user_name_9">
+                                        </div>
+                    <div class="cell" id="bid_type_9"></div>
+                  </div>    
+                                </div>
+            <div class="smallcornerleftbot"></div>
+            <div class="smallcornermiddlebot"></div>
+            <div class="smallcornerrightbot"></div>
+          </div>
+        </div>
+        <div id="producthistory1_hidden" style="display: none">
+          <div class="productdetail_box">
+            <div class="product-history-leftside_dark" ><div class="autobidder_title" style="font-size: 10px; padding-top: 2px;">ผู้ประมูลล่าสุด</div></div>
+            <div class="product-history-rightside_dark" ><div class="autobidder_title" style="font-size: 12px;">สิทธิ์ประมูลที่ใช้</div></div>
+              <div class="middlepart" style="height: 275px;">
+                <div class="producthistitlerow" style="padding-top: 25px;">
+                  <div class="cell">ราคา</div>
+                  <div class="cell">เวลา</div>
+                  <div class="cell">ประเภท</div>
+                </div>
+                                </div>
+            <div class="smallcornerleftbot"></div>
+            <div class="smallcornermiddlebot"></div>
+            <div class="smallcornerrightbot"></div>
+          </div>        
+        </div>        
+        </div>
+
+        </div>
+        <div class="openAuction_bar_bottom">
+          <div class="openAuction_leftcorner"></div>
+          <div class="openAuction_bar_middle"></div>
+          <div class="openAuction_rightcorner"></div></div>
+          <div class="clear"></div>
+          <div class="openAuction_bar_mainDIV">
+            <div class="openAction_bar-left"></div>
+            <div class="openAction_bar-middle">
+              <div class="page_title_font">
+      รายละเอียดสินค้า
+              </div>
+            </div>
+            <div class="openAction_bar-right"></div>
+          </div>
+          <div class="openAuction_bar_mainDIV2">
+            <div align="left" style="padding-top: 25px; width: 900px; text-align: left; padding-left: 25px; padding-bottom: 5px; min-height:300px;">
+              <div class="darkblue-text-17-b" style="height: 25px;">
+                <strong>
+      คุณสมบัติสินค้า
+                </strong>
+              </div>
+              <div> … </div>
+              <div> … </div>
+              <div> … </div>
+              <div> … </div>
+              <div> … </div>
+              <div> … </div>
+              <div> … </div>
+              <div> … </div>
+              <div> … </div>
+              <div> … </div>
+              <div> … </div>
+              <div> … </div>
+              <div></div>
+              </div></div>
+              <div class="openAuction_bar_bottom">
+                <div class="openAuction_leftcorner"></div>
+                <div class="openAuction_bar_middle"></div>
+                <div class="openAuction_rightcorner"></div>
+              </div>
+              </fieldset>
+          </form>
+          <!--
+          <button type="submit" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn">Cancel</button>
+        -->
+        </div>
+
+      <hr>
+
+    
+
+    </div> <!-- /container -->
+      <footer>
+        <div id="footer">
+          <div class="container">
+            <p class="muted credit">
+      &copy; Road Bid Action 2013.
+            </p>
+          </div>
+        </div>
+      </footer>
+  </body>
+</html>
