@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  user: 
+  base_price: 1
+  categrory: 
+  details: MyString
+
+two:
+  name: MyString
+  user: 
+  base_price: 1
+  categrory: 
+  details: MyString

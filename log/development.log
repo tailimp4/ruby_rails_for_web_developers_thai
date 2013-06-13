@@ -1,0 +1,293 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-06-11 13:33:21 +0700
+Served asset /rails.png - 200 OK (230ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-11 13:33:46 +0700
+Processing by BidsController#index as HTML
+  Rendered bids/index.html.erb within layouts/application (31.3ms)
+Compiled bids.css  (182ms)  (pid 3147)
+Compiled application.css  (225ms)  (pid 3147)
+Compiled jquery.js  (11ms)  (pid 3147)
+Compiled jquery_ujs.js  (2ms)  (pid 3147)
+Compiled bids.js  (2065ms)  (pid 3147)
+Compiled application.js  (2453ms)  (pid 3147)
+Completed 200 OK in 3181ms (Views: 3178.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-11 13:33:50 +0700
+Served asset /application.css - 200 OK (53ms)
+
+
+Started GET "/assets/bids.css?body=1" for 127.0.0.1 at 2013-06-11 13:33:50 +0700
+Served asset /bids.css - 200 OK (13ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-11 13:33:50 +0700
+Served asset /jquery_ujs.js - 200 OK (12ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-11 13:33:50 +0700
+Served asset /jquery.js - 200 OK (24ms)
+
+
+Started GET "/assets/bids.js?body=1" for 127.0.0.1 at 2013-06-11 13:33:50 +0700
+Served asset /bids.js - 200 OK (14ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-11 13:33:50 +0700
+Served asset /application.js - 200 OK (38ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-11 13:33:51 +0700
+Processing by BidsController#index as HTML
+  Rendered bids/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 149ms (Views: 148.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-11 13:33:51 +0700
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/bids.css?body=1" for 127.0.0.1 at 2013-06-11 13:33:51 +0700
+Served asset /bids.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bids.js?body=1" for 127.0.0.1 at 2013-06-11 13:33:51 +0700
+Served asset /bids.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-11 13:33:51 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-11 13:33:51 +0700
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-11 13:33:51 +0700
+Served asset /application.js - 304 Not Modified (8ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (330.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (48.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (2.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateProducts (20130611074434)
+  [1m[35m (1.1ms)[0m  BEGIN
+  [1m[36m (191.7ms)[0m  [1mCREATE TABLE "products" ("id" serial primary key, "name" character varying(255), "user_id" integer, "base_price" integer, "category_id" integer, "details" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (6.6ms)[0m  CREATE INDEX "index_products_on_user_id" ON "products" ("user_id")
+  [1m[36m (12.2ms)[0m  [1mCREATE INDEX "index_products_on_category_id" ON "products" ("category_id")[0m
+  [1m[35m (2.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130611074434')
+  [1m[36m (3.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateUsers (20130611074630)
+  [1m[35m (1.5ms)[0m  BEGIN
+  [1m[36m (70.4ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "fristname" character varying(255), "lastname" character varying(255), "email" character varying(255), "user_login" character varying(255), "user_password" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130611074630')
+  [1m[36m (2.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCategories (20130611074755)
+  [1m[35m (1.4ms)[0m  BEGIN
+  [1m[36m (51.9ms)[0m  [1mCREATE TABLE "categories" ("id" serial primary key, "name" character varying(255), "detail" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130611074755')
+  [1m[36m (3.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateBids (20130611075014)
+  [1m[35m (2.3ms)[0m  BEGIN
+  [1m[36m (21.0ms)[0m  [1mCREATE TABLE "bids" ("id" serial primary key, "user_id" integer, "product_id" integer, "price" integer, "bidtimestamp" timestamp, "status" character varying(255), "selectbid" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (14.0ms)[0m  CREATE INDEX "index_bids_on_user_id" ON "bids" ("user_id")
+  [1m[36m (12.1ms)[0m  [1mCREATE INDEX "index_bids_on_product_id" ON "bids" ("product_id")[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130611075014')
+  [1m[36m (2.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (1.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateProducts (20130611074434)
+Migrating to CreateUsers (20130611074630)
+Migrating to CreateCategories (20130611074755)
+Migrating to CreateBids (20130611075014)
+Migrating to RemoveColumnOfBid (20130611080653)
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36m (1.1ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (1.7ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateProducts (20130611074434)
+Migrating to CreateUsers (20130611074630)
+Migrating to CreateCategories (20130611074755)
+Migrating to CreateBids (20130611075014)
+Migrating to RemoveColumnOfBid (20130611080653)
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36m (37.2ms)[0m  [1mALTER TABLE "bid" DROP "bidtimestamp"[0m
+PG::Error: ERROR:  relation "bid" does not exist
+: ALTER TABLE "bid" DROP "bidtimestamp"
+  [1m[35m (1.2ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+  [1m[36m (2.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateProducts (20130611074434)
+Migrating to CreateUsers (20130611074630)
+Migrating to CreateCategories (20130611074755)
+Migrating to CreateBids (20130611075014)
+Migrating to RemoveColumnOfBid (20130611080653)
+  [1m[35m (1.1ms)[0m  BEGIN
+  [1m[36m (87.0ms)[0m  [1mALTER TABLE "bids" DROP "bidtimestamp"[0m
+  [1m[35m (1.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130611080653')
+  [1m[36m (2.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (1.6ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.9ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateProducts (20130611074434)
+Migrating to CreateUsers (20130611074630)
+Migrating to CreateCategories (20130611074755)
+Migrating to CreateBids (20130611075014)
+Migrating to RemoveColumnOfBid (20130611080653)
+Migrating to RenameColumnOfBid (20130611081350)
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36m (2.1ms)[0m  [1mALTER TABLE "bids" RENAME COLUMN "selectbid" TO "winner"[0m
+  [1m[35m (1.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130611081350')
+  [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (1.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (1.7ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateProducts (20130611074434)
+Migrating to CreateUsers (20130611074630)
+Migrating to CreateCategories (20130611074755)
+Migrating to CreateBids (20130611075014)
+Migrating to RemoveColumnOfBid (20130611080653)
+Migrating to RenameColumnOfBid (20130611081350)
+  [1m[35m (1.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (1.9ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateProducts (20130611074434)
+Migrating to CreateUsers (20130611074630)
+Migrating to CreateCategories (20130611074755)
+Migrating to CreateBids (20130611075014)
+Migrating to RemoveColumnOfBid (20130611080653)
+Migrating to RenameColumnOfBid (20130611081350)
+  [1m[35m (1.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.9ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateProducts (20130611074434)
+Migrating to CreateUsers (20130611074630)
+Migrating to CreateCategories (20130611074755)
+Migrating to CreateBids (20130611075014)
+Migrating to RemoveColumnOfBid (20130611080653)
+Migrating to RenameColumnOfBid (20130611081350)
+  [1m[35m (1.4ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (11.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateProducts (20130611074434)
+Migrating to CreateUsers (20130611074630)
+Migrating to CreateCategories (20130611074755)
+Migrating to CreateBids (20130611075014)
+Migrating to RemoveColumnOfBid (20130611080653)
+Migrating to RenameColumnOfBid (20130611081350)
+  [1m[35m (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateProducts (20130611074434)
+Migrating to CreateUsers (20130611074630)
+Migrating to CreateCategories (20130611074755)
+Migrating to CreateBids (20130611075014)
+Migrating to RemoveColumnOfBid (20130611080653)
+Migrating to RenameColumnOfBid (20130611081350)
+  [1m[35m (0.4ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateProducts (20130611074434)
+Migrating to CreateUsers (20130611074630)
+Migrating to CreateCategories (20130611074755)
+Migrating to CreateBids (20130611075014)
+Migrating to RemoveColumnOfBid (20130611080653)
+Migrating to RenameColumnOfBid (20130611081350)
+  [1m[35m (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateProducts (20130611074434)
+Migrating to CreateUsers (20130611074630)
+Migrating to CreateCategories (20130611074755)
+Migrating to CreateBids (20130611075014)
+Migrating to RemoveColumnOfBid (20130611080653)
+Migrating to RenameColumnOfBid (20130611081350)
+Migrating to AddColumnUser (20130612040827)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (58.0ms)[0m  [1mALTER TABLE "users" ADD COLUMN "phone" character varying(255)[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" ADD COLUMN "address" text
+  [1m[36m (2.1ms)[0m  [1mALTER TABLE "products" ADD COLUMN "pic1" character varying(255)[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "products" ADD COLUMN "pic2" character varying(255)
+  [1m[36m (1.4ms)[0m  [1mALTER TABLE "products" ADD COLUMN "pic3" character varying(255)[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "products" ADD COLUMN "pic4" character varying(255)
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "products" ADD COLUMN "youtube" character varying(255)[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "products" ADD COLUMN "startbid" date
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "products" ADD COLUMN "endbid" date[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "products" ADD COLUMN "status" character varying(255)
+  [1m[36m (9.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130612040827')[0m
+  [1m[35m (1.7ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateProducts (20130611074434)
+Migrating to CreateUsers (20130611074630)
+Migrating to CreateCategories (20130611074755)
+Migrating to CreateBids (20130611075014)
+Migrating to RemoveColumnOfBid (20130611080653)
+Migrating to RenameColumnOfBid (20130611081350)
+Migrating to AddColumnUser (20130612040827)
+  [1m[35m (0.4ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (61.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateProducts (20130611074434)
+Migrating to CreateUsers (20130611074630)
+Migrating to CreateCategories (20130611074755)
+Migrating to CreateBids (20130611075014)
+Migrating to RemoveColumnOfBid (20130611080653)
+Migrating to RenameColumnOfBid (20130611081350)
+Migrating to AddColumnUser (20130612040827)
+Migrating to RenameColumnUser (20130612064005)
+  [1m[35m (12.1ms)[0m  BEGIN
+  [1m[36m (23.5ms)[0m  [1mALTER TABLE "users" RENAME COLUMN "fristname" TO "firstname"[0m
+  [1m[35m (1.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130612064005')
+  [1m[36m (7.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml

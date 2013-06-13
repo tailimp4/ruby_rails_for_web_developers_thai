@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user: 
+  product: 
+  price: 1
+  bidtimestamp: 2013-06-11 14:50:14
+  status: MyString
+  selectbid: false
+
+two:
+  user: 
+  product: 
+  price: 1
+  bidtimestamp: 2013-06-11 14:50:14
+  status: MyString
+  selectbid: false
