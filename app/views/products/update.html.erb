@@ -1,0 +1,13 @@
+<H1>Update Product<H1/>
+<%= form_for @product do |f| %>
+ <div> <%= f.label :name %>:</div>
+ <div> <%= f.text_field :name %></div>
+
+ <div> <%= f.label :base_price %>:</div>
+ <div> <%= f.text_field :base_price %></div>
+<div>  <%= f.label :details %>:
+ <div> <%= f.text_field :details %></div>
+
+ <div> <%= f.submit %>
+<% end %>
+
