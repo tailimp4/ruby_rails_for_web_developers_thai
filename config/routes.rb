@@ -1,4 +1,11 @@
 Bidsystems::Application.routes.draw do
-  resources:Bidsystems
+  devise_for :users
+
+  devise_for :models
+
+ # resources :products do 
+  #	resources :bids
+  #end
+  resources :products
   root to: 'bids#index'
 end

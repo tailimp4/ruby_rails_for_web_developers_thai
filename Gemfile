@@ -6,6 +6,7 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
+gem 'strong_parameters'
 
 
 # Gems used only for assets and not required
@@ -21,7 +22,12 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'bootstrap-sass', '~> 2.3.2'
+gem 'money-rails'
+gem 'devise'
+gem 'carrierwave'
 
+#gem 'less-rails-bootstrap', :git => 'git://github.com/metaskills/less-rails-bootstrap.git'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
